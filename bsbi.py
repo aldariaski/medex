@@ -54,7 +54,7 @@ class BSBIIndex:
             for file in files:
                 flloc = os.path.join(subdir, file)
                 flloc = flloc.replace("collection\\","") #("collection\\")
-                open_as_text = open(os.path.join(self.data_dir, flloc)).read()
+                open_as_text = open(flloc).read()
                 #print(flloc)
                 self.doc_text_dict[flloc] = open_as_text
 
