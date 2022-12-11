@@ -53,8 +53,9 @@ class BSBIIndex:
         for subdir, dirs, files in os.walk('collection'):
             for file in files:
                 flloc = os.path.join(subdir, file)
-                flloc = flloc.replace("collection\\","") #removeprefix("collection\\")
                 open_as_text = open(flloc).read()
+                flloc = flloc.replace("collection\\","") #removeprefix("collection\\")
+
                 #print(flloc)
                 self.doc_text_dict[flloc] = open_as_text
 
@@ -67,8 +68,9 @@ class BSBIIndex:
             for file in files:
                 if iteri == sampaike:
                     flloc = os.path.join(subdir, file)
-                    flloc = flloc.replace("collection\\","")    #removeprefix("collection\\")
                     open_as_text = open(flloc).read()
+                    flloc = flloc.replace("collection\\","")    #removeprefix("collection\\")
+
                     # print(flloc)
                     return [flloc, open_as_text]
                 iteri += 1
