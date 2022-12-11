@@ -17,6 +17,7 @@ from tqdm import tqdm
 import nltk
 import re
 import random
+nltk.download('stopwords')
 
 
 class BSBIIndex:
