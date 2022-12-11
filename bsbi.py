@@ -371,7 +371,7 @@ class BSBIIndex:
                         if self.doc_id_map[pl[i]] not in res.values():
                             #(self.doc_text_dict)
                             dtd = self.doc_text_dict
-                            teks_sekarang = self.doc_text_dict[str(self.doc_id_map[pl[i]])]
+                            teks_sekarang = self.doc_text_dict[str(self.doc_id_map[pl[i]]).replace("\\", "/")]
                             #print("res[self.doc_id_map[pl[i]]]")
                             #print(self.doc_id_map[pl[i]])
                             #print("self.doc_text_dict")
@@ -380,7 +380,7 @@ class BSBIIndex:
                             res[self.doc_id_map[pl[i]]] = [skor, teks_sekarang]
 
                         else:
-                            teks_sekarang = self.doc_text_dict[str(self.doc_id_map[pl[i]])]
+                            teks_sekarang = self.doc_text_dict[str(self.doc_id_map[pl[i]]).replace("\\", "/")]
                             skor = (wtd * math.log(m / df))
                             #print("\n\n\n")
                             res[self.doc_id_map[pl[i]]] += [skor, teks_sekarang]
