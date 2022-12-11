@@ -18,7 +18,7 @@ import nltk
 import re
 import random
 nltk.download('stopwords')
-nltk.download()
+nltk.download('popular')
 
 
 class BSBIIndex:
