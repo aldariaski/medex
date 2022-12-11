@@ -68,7 +68,7 @@ class BSBIIndex:
                 if iteri == sampaike:
                     flloc = os.path.join(subdir, file)
                     flloc = flloc.replace("collection\\","")    #removeprefix("collection\\")
-                    open_as_text = open(os.path.join(self.data_dir, flloc)).read()
+                    open_as_text = open(flloc).read()
                     # print(flloc)
                     return [flloc, open_as_text]
                 iteri += 1
