@@ -1,1 +1,1 @@
-web: python:3.10 && python manage.py migrate && gunicorn medex.wsgi
+web: python manage.py migrate && gunicorn medex.wsgi
