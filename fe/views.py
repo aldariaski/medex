@@ -21,6 +21,11 @@ def home(request):
     isi = ab[1]
     context = {"doc": doc,
                "isi": isi}
+    if request.method == "POST":
+        query = request.POST.get('search')
+        return render(request, 'fe/home.html', context)
+        #return redirect(results(query))
+
     return render(request, 'fe/home.html', context)
 
 
@@ -41,8 +46,11 @@ def indeksi(request):
 
 def results(request):
     result_pages = []
-
     query = ""
+
+    if not query:
+        query = ""
+
     # result_pages = [[1,"A"], [2,"B"]]
     if request.method == "POST":
         query = request.POST.get('search')

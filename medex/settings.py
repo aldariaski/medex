@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-!$s%w^s@2mem-_((x5d!u*4#79^w&^1qcnb(zy9uo%%)4%(vwo
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', "django-server-production-a05b.up.railway.app", '.localhost', '127.0.0.1', '[::1]']
+
 #ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
 
 
@@ -54,6 +55,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CSRF_TRUSTED_ORIGINS = ["https://django-server-production-a05b.up.railway.app"]
+
 ROOT_URLCONF = 'medex.urls'
 
 TEMPLATES = [
@@ -76,6 +80,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'medex.wsgi.application'
+
 
 
 # Database
@@ -139,5 +144,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-CSRF_TRUSTED_ORIGINS = ['*', "django-server-production-a05b.up.railway.app", '.localhost', '127.0.0.1', '[::1]']
