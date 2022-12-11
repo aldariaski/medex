@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'fe',
     'be',
     'static',
-    'templates'
+    'templates',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
