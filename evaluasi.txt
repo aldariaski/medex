@@ -1,0 +1,42 @@
+Hasil dengan BM25
+6\557.txt                      24.381
+5\426.txt                      24.173
+2\119.txt                      22.246
+6\547.txt                      21.554
+3\247.txt                      18.407
+4\393.txt                      16.730
+11\1018.txt                    16.147
+3\261.txt                      15.963
+4\381.txt                      15.863
+6\554.txt                      15.031
+
+----------------------------------------------------
+Hasil BM25 diolah Letor
+query        : alkylated with radioactive iodoacetate
+SERP/Ranking :
+2\119.txt                      0.977153
+3\261.txt                      0.669665
+3\247.txt                      0.589777
+4\381.txt                      0.349953
+6\557.txt                      0.279342
+4\393.txt                      0.261353
+6\554.txt                      0.181262
+11\1018.txt                    -0.403920
+5\426.txt                      -0.445933
+6\547.txt                      -0.922987
+
+----
+Letor adalah suatu teknik yang digunakan untuk menyelesaikan permasalahan Ranking.
+Perbedaan utama dari Learning to rank dan tradisional supervised learning lainnya adalah:
+● Traditional Supervised Learning
+Biasanya digunakan untuk melakukan prediksi berupa class atau angka
+numerikal skor dari suatu instance/data, lalu diurutkan.
+● Learning to Rank
+Menyelesaikan permasalahan ranking untuk melakukan urutan secara optimal.
+Learning to rank umumnya tidak terlalu memperdulikan skor yang didapat,
+lebih mementingkan hasil order (urutan).
+
+------
+LambdaMart
+LGBMRanker mencoba prediksi dengan data training
+Lalu predict Ranking for Unseen Q-D Paris

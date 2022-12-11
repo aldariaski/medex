@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/searches.css' %}">
+<script src="{% static 'js/pagination.js' %}"></script>
+{% endblock meta %}
+
+{% block content %}
+<center>
+
+    <div class="logo-small">
+        <a href="{% url 'fe:home' %}"><img alt="medex" src="{% static 'medex_logo-removebg-preview.png' %}"
+                                           height=80></a>
+    </div>
+    <div class="bar-small">
+        <form action="{% url 'fe:results' %}" method="POST">
+            {% csrf_token %}
+            <input class="searchbar-small" type="text" value="{{query}}" placeholder="Cari" title="Search"
+                   name="search">
+            <a href="{% url 'fe:indeksi' %}"> <input type="image" class="searx" name="submit" src="{% static 'medex_logo-removebg-preview.png' %}"
+                       title="Search"></a>
+
+        </form>
+    </div>
+
+    <a href="{% url 'fe:indeksi' %}"> <img class="searx" src="{% static 'index.png' %}"
+                                           title="Indeks"></a>
+
+
+    <center>
+        <div class="d-flex flex-column mx-5 mt-3" style="width:65%; max-width: 700px;">
+
+            <nav class="pagination-container" aria-label="Halaman pencarian">
+                    <ul class="pagination">
+                        <div class="page-item" id="pagination-numbers"></div>
+                    </ul>
+            </nav>
+
+
+
+                {% for rp in result_pages %}
+
+                    <div class="border shadow mt-3 p-1 rounded bg-light" style="min-height:3rem;">
+                        <a class="text-dark mb-1 border-bottom"><strong>#{{rp.0}}</strong></a>
+                        <p class="text-dark mb-1 border-bottom"><b>Doc:</b> {{rp.1}}</p>
+                        <p align="left" class="text-dark mb-1 border-bottom"><b>Text:</b> {{rp.2}}</p>
+                        <p class="text-dark mb-1 border-bottom"><b>Text:</b> {{rp.3}}</p>
+                    </div>
+                </tr>
+                {% endfor %}
+
+
+
+
+        </div>
+
+
+    </center>
+
+</center>
+<br><br><br><br>
+
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/pagination.js' %}"></script>
+{% endblock script %}

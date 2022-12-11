@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/searches.css' %}">
+{% endblock meta %}
+
+{% block content %}
+<center>
+
+    <div class="logo">
+      <img alt="medex" src="{% static 'medex_logo-removebg-preview.png' %}" height=256>
+    </div>
+    <p>Panjang semuanya ada {{len}} nih.</p>
+    <p>Congrats udah ngindeks BSBInya.</p>
+    </body></center>
+
+
+{% endblock content %}

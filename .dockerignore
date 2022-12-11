@@ -1,0 +1,13 @@
+# flyctl launch added from be\.idea\.gitignore
+# Default ignored files
+be\.idea\shelf
+be\.idea\workspace.xml
+# Editor-based HTTP Client requests
+be\.idea\httpRequests
+# Datasource local storage ignored files
+be\.idea\dataSources
+be\.idea\dataSources.local.xml
+
+# flyctl launch added from venv\.gitignore
+# created by virtualenv automatically
+venv\**\*

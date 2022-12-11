@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/searches.css' %}">
+{% endblock meta %}
+
+{% block content %}
+
+
+    <div class="logo">
+      <img alt="medex" src="{% static 'medex_logo-removebg-preview.png' %}" height=256>
+    </div>
+
+<div class="d-flex flex-column mx-5 mt-3" style="width:65%; max-width: 700px;">
+    <a href="{% url 'fe:indeksi' %}"> <img class="searx" src="{% static 'index.png' %}"
+                                           title="Search"></a>
+        <p>Pencett biar indeks jalan</p>
+
+<h1>FAQ</h1>
+
+    <h5>Yusuf Fakhri Aldrian - Information Retrieval - medex</h5>
+
+    <h2> Memakai <a href="https://en.wikipedia.org/wiki/Okapi_BM25" target="_blank"> BM25 </a></h2>
+
+
+    <h2> Sumber untuk search, indexing dll dilihat dari beberapa laman di internet</h2>
+<ul>
+    <li>https://github.com/har07/PySastrawi</li>
+
+    <li>https://blog.csdn.net/jianglingbixin/article/details/109552318</li>
+
+    <li>https://github.com/Lichuanro/Information-Retrieval-and-Web-Search</li>
+</ul>
+
+<h2> Untuk django, front-end dapat referensi</h2>
+<ul>
+    <li>https://github.com/SandyUndefined/Django-Search-Engine</li>
+
+    <li>https://gitlab.com/tk-rpl-a6/ecwa-v2 (proyek RPL kelompok penulis)</li>
+
+    <li>https://www.brandcrowd.com/maker/logo/search-love-grid-5935?text=Medex&isVariation=True (logo)</li>
+
+    <li>Stack overflow </li>
+
+    <li> Others: https://datatables.net/ (tidak jadi) </li>
+
+    <li>https://info.icei.ac.id/upload/60ff9464c7a1a1.png (logo FAQ) </li>
+
+    <li>https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Index_%28internet_news_portal%29_logo.svg/2560px-Index_%28internet_news_portal%29_logo.svg.png (logo index) </li>
+
+    <li>https://stackoverflow.com/questions/24524318/server-clock-with-django-javascript (jam)</li>
+</ul>
+
+
+
+
+
+
+</div>
+
+<br><br>
+
+{% endblock content %}

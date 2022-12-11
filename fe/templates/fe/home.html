@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/searches.css' %}">
+{% endblock meta %}
+
+{% block content %}
+<center>
+
+    <div class="logo">
+      <img alt="medex" src="{% static 'medex_logo-removebg-preview.png' %}" height=256>
+    </div>
+    <div class="bar">
+        <form action="{% url 'fe:results' %}" method="POST">
+            {% csrf_token %}
+      <input class="searchbar" type="text" placeholder="Cari" title="Search" name="search">
+      <a> <input type="image" class="searx" name="submit" src="{% static 'medex_logo-removebg-preview.png' %}" title="Search"></a>
+            </a>
+            </form>
+    </div>
+    <a href="{% url 'fe:indeksi' %}"> <img class="searx" src="{% static 'index.png' %}"
+                                           title="Indeks"></a>
+    <br><br>
+    <div class="d-flex flex-column mx-5 mt-3" style="width:65%; max-width: 700px;">
+    <div class="border shadow mt-3 p-1 rounded bg-light" style="min-height:3rem;">
+                        <a class="text-dark mb-1 border-bottom"><strong>Fun Fact!</strong></a>
+                        <p align="left" class="text-dark mb-1 border-bottom">{{isi}}</p>
+                        <a class="text-dark mb-1 border-bottom"><b>Doc:</b> {{doc}}</a>
+    </div>
+<!--        <div id="clock"></div>-->
+    </div>
+<br><br><br>
+    </body></center>
+
+{% endblock content %}
+
+{% block script %}
+<script>
+
+function getServerTime() {
+  return $.ajax({async: false}).getResponseHeader( 'Date' );
+}
+
+</script>
+{% endblock script %}
