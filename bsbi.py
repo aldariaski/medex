@@ -370,6 +370,7 @@ class BSBIIndex:
 
                         if self.doc_id_map[pl[i]] not in res.values():
                             #(self.doc_text_dict)
+                            dtd = self.doc_text_dict
                             teks_sekarang = self.doc_text_dict[str(self.doc_id_map[pl[i]])]
                             #print("res[self.doc_id_map[pl[i]]]")
                             #print(self.doc_id_map[pl[i]])
